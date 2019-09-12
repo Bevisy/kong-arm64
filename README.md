@@ -1,4 +1,4 @@
-# Docker image for ARM64(aarch64) base on x86_64
+# Docker image for ARM64(aarch64) based on x86_64
 This Docker image provides the Open Source edition of the Kong Gateway (see
  https://github.com/Kong/kong) for ARM64(aarch64) based architectures.
 If you want to run kong on arm, you can find help [here](https://github.com/svenwal/kong-arm)
@@ -21,7 +21,7 @@ docker run --rm --privileged multiarch/qemu-user-static:register --reset
 git clone https://github.com/Bevisy/kong-arm64.git
 
 cd 1.0.0
-docker build -t kong:1.0.0_arm64 
+docker build -t kong:1.0.0_arm64 .
 ```
 PS: Because you can't use luarocks to install kong-1.0.0, we install it from
  source.
@@ -34,7 +34,7 @@ docker run --rm --privileged multiarch/qemu-user-static:register --reset
 git clone https://github.com/Bevisy/kong-arm64.git
 
 cd 1.3.0
-docker build -t kong:1.3.0_arm64 
+docker build -t kong:1.3.0_arm64 .
 ```
 PS: install kong by luarocks. You can install other version by luarocks refer
  to https://luarocks.org/modules/kong/kong
