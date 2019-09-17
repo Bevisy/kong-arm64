@@ -1,4 +1,4 @@
-FROM bevisy/debian:10_arm64 as build
+FROM bevisy/debian:10_arm64 as builder
 
 # install compile dependency
 RUN apt-get update && \
@@ -81,7 +81,7 @@ RUN apt-get update && \
 
 ENV PATH="$PATH:/usr/local/openresty/bin:/usr/local/openresty/luajit/bin:/usr/local/openresty/nginx/sbin"
 
-COPY ../1.3.0/docker-entrypoint.sh /docker-entrypoint.sh
+COPY docker-entrypoint.sh /docker-entrypoint.sh
 
 USER kong
 
